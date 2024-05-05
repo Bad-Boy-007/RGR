@@ -54,7 +54,7 @@ def main():
 def make_prediction_single(df):
     st.header("Результат прогноза:")
     lightgbm_result=lightgbm.predict(df)
-    st.write(f"Результат линейной регрессии c нормализацией L2: {round((float(lightgbm_result)), 3)}$")
+    st.write(f"Результат LightGBM: {round((float(lightgbm_result)), 3)}$")
     baggingReg_result=baggingReg.predict(df)
     st.write(f"Результат BaggingRegressor: {round(float(baggingReg_result), 3)}$")
     gradientBoostingReg_result=gradientBoostingReg.predict(df)
