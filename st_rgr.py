@@ -24,6 +24,11 @@ data.head()
 
 #------------------------------------------------------------------------------------------------------------------
 
+
+mattley=keras.models.load_model('models/model_MacConahi.keras')
+
+
+
 neoroReg=keras.models.load_model('models/model.keras')
 lightgbm=load_model('models/lightgbm')
 with open("models/bagging_model.pkl","rb") as f:
