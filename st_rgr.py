@@ -61,7 +61,7 @@ def make_prediction_single(df):
     st.write(f"Результат GradientBoostingRegressor: {round(float(gradientBoostingReg_result), 3)}$")
     stackingReg_result=stackingReg.predict(df)
     st.write(f"Результат StackingRegressor: {round(float(stackingReg_result), 3)}$")
-    neoroReg_result=neoroReg.predict(df)
+    neoroReg_result=neoroReg.predict(pd.Dataframe(df))
     st.write(f"Результат нейронной сети: {round(float(neoroReg_result), 3)}$")
 
 #------------------------------------------------------------------------------------------------------------------
